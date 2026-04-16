@@ -85,6 +85,33 @@ pet5 = Pet.create(
   owner: owner3
 )
 
+pet6 = Pet.create(
+  name: "Max",
+  species: "Dog",
+  breed: "Golden Retriever",
+  date_of_birth: "2022-06-15",
+  weight: 28.0,
+  owner: owner1
+)
+
+pet7 = Pet.create(
+  name: "Nala",
+  species: "Cat",
+  breed: "Maine Coon",
+  date_of_birth: "2023-02-20",
+  weight: 5.5,
+  owner: owner2
+)
+
+pet8 = Pet.create(
+  name: "Toby",
+  species: "Dog",
+  breed: "Poodle",
+  date_of_birth: "2021-09-10",
+  weight: 7.0,
+  owner: owner3
+)
+
 
 ### VETS
 
@@ -104,13 +131,21 @@ vet2 = Vet.create(
   specialization: "Surgery"
 )
 
+vet3 = Vet.create(
+  first_name: "Pedro",
+  last_name: "Sanchez",
+  email: "pedro@vet.com",
+  phone: "333333333",
+  specialization: "Dermatology"
+)
+
 
 ### APPOINTMENTS
 
 appointment1 = Appointment.create(
   pet: pet1,
   vet: vet1,
-  date: Time.now,
+  date: Time.new(2026, 3, 25),
   reason: "Checkup",
   status: 0
 )
@@ -118,7 +153,7 @@ appointment1 = Appointment.create(
 appointment2 = Appointment.create(
   pet: pet2,
   vet: vet2,
-  date: Time.now,
+  date: Time.new(2025, 11, 3),
   reason: "Vaccination",
   status: 1
 )
@@ -126,7 +161,7 @@ appointment2 = Appointment.create(
 appointment3 = Appointment.create(
   pet: pet3,
   vet: vet1,
-  date: Time.now,
+  date: Time.new(2026, 1, 22),
   reason: "Injury",
   status: 2
 )
@@ -134,7 +169,7 @@ appointment3 = Appointment.create(
 appointment4 = Appointment.create(
   pet: pet4,
   vet: vet2,
-  date: Time.now,
+  date: Time.new(2025, 12, 1),
   reason: "Skin issue",
   status: 3
 )
@@ -142,9 +177,65 @@ appointment4 = Appointment.create(
 appointment5 = Appointment.create(
   pet: pet5,
   vet: vet1,
-  date: Time.now,
+  date: Time.new(2026, 4, 10),
   reason: "Routine check",
   status: 2
+)
+
+appointment6 = Appointment.create(
+  pet: pet6,
+  vet: vet3,
+  date: Time.new(2025, 10, 14),
+  reason: "Allergy",
+  status: 0
+)
+
+appointment7 = Appointment.create(
+  pet: pet7,
+  vet: vet3,
+  date: Time.new(2025, 11, 28),
+  reason: "Checkup",
+  status: 1
+)
+
+appointment8 = Appointment.create(
+  pet: pet6,
+  vet: vet3,
+  date: Time.new(2025, 12, 16),
+  reason: "Skin irritation",
+  status: 2
+)
+
+appointment9 = Appointment.create(
+  pet: pet1,
+  vet: vet2,
+  date: Time.new(2026, 1, 9),
+  reason: "Follow-up",
+  status: 0
+)
+
+appointment10 = Appointment.create(
+  pet: pet2,
+  vet: vet1,
+  date: Time.new(2026, 2, 21),
+  reason: "Dental cleaning",
+  status: 1
+)
+
+appointment11 = Appointment.create(
+  pet: pet7,
+  vet: vet2,
+  date: Time.new(2026, 3, 13),
+  reason: "Vaccination",
+  status: 2
+)
+
+appointment12 = Appointment.create(
+  pet: pet6,
+  vet: vet1,
+  date: Time.new(2026, 4, 7),
+  reason: "Routine check",
+  status: 3
 )
 
 
@@ -193,4 +284,67 @@ Treatment.create(
   dosage: "Single dose",
   notes: "Follow-up in 3 months",
   administered_at: Time.now
+)
+
+Treatment.create(
+  appointment: appointment6,
+  name: "Antihistamine",
+  medication: "Loratadine",
+  dosage: "Once daily",
+  notes: "Monitor response",
+  administered_at: appointment6.date + 2.hours
+)
+
+Treatment.create(
+  appointment: appointment7,
+  name: "General check",
+  medication: "None",
+  dosage: "N/A",
+  notes: "Healthy",
+  administered_at: appointment7.date + 1.day + 3.hours
+)
+
+Treatment.create(
+  appointment: appointment8,
+  name: "Skin cream",
+  medication: "Hydrocortisone",
+  dosage: "Twice daily",
+  notes: "Apply for 1 week",
+  administered_at: appointment8.date + 5.hours
+)
+
+Treatment.create(
+  appointment: appointment9,
+  name: "Follow-up exam",
+  medication: "None",
+  dosage: "N/A",
+  notes: "Stable condition",
+  administered_at: appointment9.date + 2.days
+)
+
+Treatment.create(
+  appointment: appointment10,
+  name: "Cleaning",
+  medication: "Dental solution",
+  dosage: "Single session",
+  notes: "Teeth cleaned",
+  administered_at: appointment10.date + 4.hours
+)
+
+Treatment.create(
+  appointment: appointment11,
+  name: "Vaccine",
+  medication: "Feline vaccine",
+  dosage: "1 dose",
+  notes: "No reaction",
+  administered_at: appointment11.date + 1.day
+)
+
+Treatment.create(
+  appointment: appointment12,
+  name: "Routine check",
+  medication: "None",
+  dosage: "N/A",
+  notes: "All good",
+  administered_at: appointment12.date + 3.hours
 )
