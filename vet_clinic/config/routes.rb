@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :owners, only: [:index, :show]
+  resources :pets, only: [:index, :show]
+  resources :vets, only: [:index, :show]
+  resources :appointments, only: [:index, :show]
+
+  root "owners#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
