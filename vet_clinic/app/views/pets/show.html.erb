@@ -1,2 +1,38 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<h1 class="text-center my-4">Pet Details</h1>
+
+<div class="container">
+  <div class="card p-4 mb-4">
+    <p><strong>Name:</strong> <%= @pet.name %></p>
+    <p><strong>Species:</strong> <%= @pet.species %></p>
+    <p><strong>Breed:</strong> <%= @pet.breed %></p>
+    <p><strong>Date of Birth:</strong> <%= @pet.date_of_birth.strftime("%B %d, %Y") if @pet.date_of_birth %></p>
+    <p><strong>Weight:</strong> <%= @pet.weight %></p>
+    <p>
+      <strong>Owner:</strong>
+      <%= link_to "#{@pet.owner.first_name} #{@pet.owner.last_name}", owner_path(@pet.owner) %>
+    </p>
+  </div>
+
+  <h2 class="mb-3">Appointments</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Date</th>
+          <th>Vet</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pet.appointments.each do |appointment| %>
+          <tr>
+            <td><%= link_to appointment.date.strftime("%B %d, %Y"), appointment_path(appointment) %></td>
+            <td><%= link_to "#{appointment.vet.first_name} #{appointment.vet.last_name}", vet_path(appointment.vet) %></td>
+            <td><%= appointment.reason %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -241,3 +241,927 @@ Completed 200 OK in 486ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cach
   [1m[36mTreatment Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments" /*application='VetClinic'*/[0m
   [1m[36mAppointment Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "appointments" /*application='VetClinic'*/[0m
   [1m[36mTreatment Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments" /*application='VetClinic'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:39:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (116.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 286.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 469.4ms | GC: 0.0ms)
+Completed 200 OK in 1063ms (Views: 424.2ms | ActiveRecord: 140.1ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:39:36 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 122.6ms | GC: 0.0ms)
+Completed 200 OK in 146ms (Views: 123.9ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:40:00 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 1.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/3" for 127.0.0.1 at 2026-04-16 18:40:02 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/2" for 127.0.0.1 at 2026-04-16 18:40:02 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/6" for 127.0.0.1 at 2026-04-16 18:40:05 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "6"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 6 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/7" for 127.0.0.1 at 2026-04-16 18:40:05 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "7"}
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 7 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 2.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:40:05 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/show.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:46:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (103.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 149.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 172.7ms | GC: 0.0ms)
+Completed 200 OK in 240ms (Views: 56.9ms | ActiveRecord: 124.3ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:48:24 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 41.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 48.2ms | ActiveRecord: 6.2ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:48:27 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 17.0ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:49:34 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 10.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 18.3ms | ActiveRecord: 3.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:49:36 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 15.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 2.3ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:49:37 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 17.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 16.5ms | ActiveRecord: 2.9ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:49:38 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 12.0ms | ActiveRecord: 2.3ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:49:39 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:49:42 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (1.0ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (2.1ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 36.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | GC: 0.0ms)
+Completed 200 OK in 82ms (Views: 34.3ms | ActiveRecord: 8.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:50:59 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 21.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 29.2ms | ActiveRecord: 6.1ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/3" for 127.0.0.1 at 2026-04-16 18:51:00 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mOwner Load (0.8ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 3 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 6.5ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/2" for 127.0.0.1 at 2026-04-16 18:51:01 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 2 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:51:01 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:51:02 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.1ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 16.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2026-04-16 18:51:05 -0400
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/controllers/appointments_controller.rb:7:in 'AppointmentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/vets/1" for 127.0.0.1 at 2026-04-16 18:51:29 -0400
+Processing by VetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mVet Load (0.8ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/controllers/vets_controller.rb:7:in 'VetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering vets/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."vet_id" = 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:24
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  Rendered vets/show.html.erb within layouts/application (Duration: 17.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 22.5ms | ActiveRecord: 3.6ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2026-04-16 18:51:41 -0400
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/controllers/appointments_controller.rb:7:in 'AppointmentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/show.html.erb within layouts/application
+  Rendered appointments/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 3.9ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/vets/1" for 127.0.0.1 at 2026-04-16 18:52:37 -0400
+Processing by VetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/controllers/vets_controller.rb:7:in 'VetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering vets/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."vet_id" = 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:24
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  Rendered vets/show.html.erb within layouts/application (Duration: 34.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | GC: 0.0ms)
+Completed 200 OK in 69ms (Views: 40.7ms | ActiveRecord: 6.1ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2026-04-16 18:52:39 -0400
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/controllers/appointments_controller.rb:7:in 'AppointmentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:11
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:15
+  [1m[36mTreatment Load (1.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."appointment_id" = 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:33
+  Rendered appointments/show.html.erb within layouts/application (Duration: 12.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 14.3ms | ActiveRecord: 3.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2026-04-16 18:53:22 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 3 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 12.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 16.0ms | ActiveRecord: 2.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/3" for 127.0.0.1 at 2026-04-16 18:53:22 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 3 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.1ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/vets/1" for 127.0.0.1 at 2026-04-16 18:53:26 -0400
+Processing by VetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mVet Load (0.5ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/controllers/vets_controller.rb:7:in 'VetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering vets/show.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."vet_id" = 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:24
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='show',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/show.html.erb:27
+  Rendered vets/show.html.erb within layouts/application (Duration: 13.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 1.8ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments/3" for 127.0.0.1 at 2026-04-16 18:53:31 -0400
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mAppointment Load (0.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/controllers/appointments_controller.rb:7:in 'AppointmentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:11
+  [1m[36mVet Load (0.3ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:15
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."appointment_id" = 3 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:33
+  Rendered appointments/show.html.erb within layouts/application (Duration: 10.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 1.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:54:53 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.3ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 9.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 10.9ms | ActiveRecord: 1.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:54:55 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:54:56 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 1.9ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:54:59 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 13.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 1.7ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:55:00 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 16.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 2.6ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:55:02 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:55:03 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.3ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 1.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:55:05 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.4ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 1.5ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets/1" for 127.0.0.1 at 2026-04-16 18:55:06 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/controllers/pets_controller.rb:7:in 'PetsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering pets/show.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:13
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."pet_id" = 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:29
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/show.html.erb:32
+  Rendered pets/show.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-16 18:55:09 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 4 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 5 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 6 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 7 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 13.7ms | ActiveRecord: 2.6ms (8 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners/1" for 127.0.0.1 at 2026-04-16 18:55:39 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/controllers/owners_controller.rb:7:in 'OwnersController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."owner_id" = 1 /*action='show',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/show.html.erb:24
+  Rendered owners/show.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 0.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mOwner Load (135.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /* loading for pp */ LIMIT 11 /*application='VetClinic'*/[0m
+  [1m[36mPet Pluck (0.9ms)[0m  [1m[34mSELECT "pets"."name", "pets"."species", "pets"."breed" FROM "pets" /*application='VetClinic'*/[0m
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" /*application='VetClinic'*/[0m
+  [1m[36mVet Pluck (1.0ms)[0m  [1m[34mSELECT "vets"."first_name", "vets"."last_name", "vets"."email" FROM "vets" /*application='VetClinic'*/[0m
+  [1m[36mVet Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "vets"."email" AS "vets_email" FROM "vets" GROUP BY "vets"."email" /*application='VetClinic'*/[0m
+  [1m[36mAppointment Pluck (0.9ms)[0m  [1m[34mSELECT "appointments"."date", "appointments"."reason", "appointments"."status", "appointments"."pet_id", "appointments"."vet_id" FROM "appointments" /*application='VetClinic'*/[0m
+  [1m[36mAppointment Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "appointments" /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='VetClinic'*/[0m
+  [1m[35m (188.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vet_clinic_development" /*application='VetClinic'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='VetClinic'*/[0m
+  [1m[35m (159.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vet_clinic_test" /*application='VetClinic'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='VetClinic'*/[0m
+  [1m[35m (587.7ms)[0m  [1m[35mCREATE DATABASE "vet_clinic_development" ENCODING = 'unicode' /*application='VetClinic'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mSET search_path TO public /*application='VetClinic'*/[0m
+  [1m[35m (256.5ms)[0m  [1m[35mCREATE DATABASE "vet_clinic_test" ENCODING = 'unicode' /*application='VetClinic'*/[0m
+  [1m[35mSQL (107.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='VetClinic'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "appointments" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (46.4ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "date" timestamp(6) NOT NULL, "pet_id" integer NOT NULL, "reason" character varying, "status" integer NOT NULL, "updated_at" timestamp(6) NOT NULL, "vet_id" integer NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "owners" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "owners" ("id" bigserial primary key, "address" text, "created_at" timestamp(6) NOT NULL, "email" character varying, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "phone" character varying, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pets" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "pets" ("id" bigserial primary key, "breed" character varying, "created_at" timestamp(6) NOT NULL, "date_of_birth" date, "name" character varying NOT NULL, "owner_id" integer NOT NULL, "species" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL, "weight" decimal) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "treatments" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "treatments" ("id" bigserial primary key, "administered_at" timestamp(6) NOT NULL, "appointment_id" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "dosage" character varying, "medication" character varying, "name" character varying NOT NULL, "notes" text, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vets" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "vets" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "email" character varying, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "phone" character varying, "specialization" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20260409210839) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20260409210834),
+(20260409210830),
+(20260409210825),
+(20260409210820); /*application='VetClinic'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-16 23:05:59.682604', '2026-04-16 23:05:59.682607') RETURNING "key" /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'a73d6702bfaf75effa77adcf22a5ddb12fc7f49c', '2026-04-16 23:05:59.687442', '2026-04-16 23:05:59.687444') RETURNING "key" /*application='VetClinic'*/[0m
+  [1m[35mSQL (87.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='VetClinic'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "appointments" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (33.5ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "date" timestamp(6) NOT NULL, "pet_id" integer NOT NULL, "reason" character varying, "status" integer NOT NULL, "updated_at" timestamp(6) NOT NULL, "vet_id" integer NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "owners" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "owners" ("id" bigserial primary key, "address" text, "created_at" timestamp(6) NOT NULL, "email" character varying, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "phone" character varying, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "pets" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "pets" ("id" bigserial primary key, "breed" character varying, "created_at" timestamp(6) NOT NULL, "date_of_birth" date, "name" character varying NOT NULL, "owner_id" integer NOT NULL, "species" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL, "weight" decimal) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "treatments" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "treatments" ("id" bigserial primary key, "administered_at" timestamp(6) NOT NULL, "appointment_id" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "dosage" character varying, "medication" character varying, "name" character varying NOT NULL, "notes" text, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "vets" CASCADE /*application='VetClinic'*/[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "vets" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "email" character varying, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "phone" character varying, "specialization" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20260409210839) /*application='VetClinic'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20260409210834),
+(20260409210830),
+(20260409210825),
+(20260409210820); /*application='VetClinic'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-16 23:05:59.872736', '2026-04-16 23:05:59.872738') RETURNING "key" /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2026-04-16 23:05:59.876331' WHERE "ar_internal_metadata"."key" = 'environment' /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'a73d6702bfaf75effa77adcf22a5ddb12fc7f49c', '2026-04-16 23:05:59.879450', '2026-04-16 23:05:59.879451') RETURNING "key" /*application='VetClinic'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mOwner Create (3.0ms)[0m  [1m[32mINSERT INTO "owners" ("address", "created_at", "email", "first_name", "last_name", "phone", "updated_at") VALUES ('Lo Barnechea', '2026-04-16 23:06:00.107485', 'domingo@mail.com', 'Domingo', 'De la Fuente', '123456789', '2026-04-16 23:06:00.107485') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mOwner Create (1.8ms)[0m  [1m[32mINSERT INTO "owners" ("address", "created_at", "email", "first_name", "last_name", "phone", "updated_at") VALUES ('Santiago', '2026-04-16 23:06:00.114939', 'juan@mail.com', 'Juan', 'Perez', '987654321', '2026-04-16 23:06:00.114939') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mOwner Create (1.9ms)[0m  [1m[32mINSERT INTO "owners" ("address", "created_at", "email", "first_name", "last_name", "phone", "updated_at") VALUES ('Providencia', '2026-04-16 23:06:00.120665', 'maria@mail.com', 'Maria', 'Gonzalez', '555555555', '2026-04-16 23:06:00.120665') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mPet Create (3.0ms)[0m  [1m[32mINSERT INTO "pets" ("breed", "created_at", "date_of_birth", "name", "owner_id", "species", "updated_at", "weight") VALUES ('Labrador', '2026-04-16 23:06:00.183765', '2020-05-10', 'Firulais', 1, 'Dog', '2026-04-16 23:06:00.183765', 25.5) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mPet Create (2.0ms)[0m  [1m[32mINSERT INTO "pets" ("breed", "created_at", "date_of_birth", "name", "owner_id", "species", "updated_at", "weight") VALUES ('Siames', '2026-04-16 23:06:00.191682', '2021-03-15', 'Michi', 1, 'Cat', '2026-04-16 23:06:00.191682', 4.2) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mPet Create (1.9ms)[0m  [1m[32mINSERT INTO "pets" ("breed", "created_at", "date_of_birth", "name", "owner_id", "species", "updated_at", "weight") VALUES ('Bulldog', '2026-04-16 23:06:00.197390', '2019-07-20', 'Rocky', 2, 'Dog', '2026-04-16 23:06:00.197390', 18.0) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mPet Create (2.3ms)[0m  [1m[32mINSERT INTO "pets" ("breed", "created_at", "date_of_birth", "name", "owner_id", "species", "updated_at", "weight") VALUES ('Persa', '2026-04-16 23:06:00.203177', '2022-01-10', 'Luna', 3, 'Cat', '2026-04-16 23:06:00.203177', 3.8) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mPet Create (1.8ms)[0m  [1m[32mINSERT INTO "pets" ("breed", "created_at", "date_of_birth", "name", "owner_id", "species", "updated_at", "weight") VALUES ('Mini Lop', '2026-04-16 23:06:00.208707', '2021-11-05', 'Bunny', 3, 'Rabbit', '2026-04-16 23:06:00.208707', 2.1) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mVet Create (2.6ms)[0m  [1m[32mINSERT INTO "vets" ("created_at", "email", "first_name", "last_name", "phone", "specialization", "updated_at") VALUES ('2026-04-16 23:06:00.218192', 'carlos@vet.com', 'Carlos', 'Lopez', '111111111', 'General Practice', '2026-04-16 23:06:00.218192') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mVet Create (1.8ms)[0m  [1m[32mINSERT INTO "vets" ("created_at", "email", "first_name", "last_name", "phone", "specialization", "updated_at") VALUES ('2026-04-16 23:06:00.224128', 'ana@vet.com', 'Ana', 'Martinez', '222222222', 'Surgery', '2026-04-16 23:06:00.224128') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mAppointment Create (3.5ms)[0m  [1m[32mINSERT INTO "appointments" ("created_at", "date", "pet_id", "reason", "status", "updated_at", "vet_id") VALUES ('2026-04-16 23:06:00.238679', '2026-04-16 23:06:00.230855', 1, 'Checkup', 0, '2026-04-16 23:06:00.238679', 1) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mAppointment Create (3.9ms)[0m  [1m[32mINSERT INTO "appointments" ("created_at", "date", "pet_id", "reason", "status", "updated_at", "vet_id") VALUES ('2026-04-16 23:06:00.248490', '2026-04-16 23:06:00.248293', 2, 'Vaccination', 1, '2026-04-16 23:06:00.248490', 2) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mAppointment Create (3.1ms)[0m  [1m[32mINSERT INTO "appointments" ("created_at", "date", "pet_id", "reason", "status", "updated_at", "vet_id") VALUES ('2026-04-16 23:06:00.259300', '2026-04-16 23:06:00.258972', 3, 'Injury', 2, '2026-04-16 23:06:00.259300', 1) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mAppointment Create (13.0ms)[0m  [1m[32mINSERT INTO "appointments" ("created_at", "date", "pet_id", "reason", "status", "updated_at", "vet_id") VALUES ('2026-04-16 23:06:00.267904', '2026-04-16 23:06:00.267664', 4, 'Skin issue', 3, '2026-04-16 23:06:00.267904', 2) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mAppointment Create (2.2ms)[0m  [1m[32mINSERT INTO "appointments" ("created_at", "date", "pet_id", "reason", "status", "updated_at", "vet_id") VALUES ('2026-04-16 23:06:00.284850', '2026-04-16 23:06:00.284601', 5, 'Routine check', 2, '2026-04-16 23:06:00.284850', 1) RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mTreatment Create (2.7ms)[0m  [1m[32mINSERT INTO "treatments" ("administered_at", "appointment_id", "created_at", "dosage", "medication", "name", "notes", "updated_at") VALUES ('2026-04-16 23:06:00.302601', 2, '2026-04-16 23:06:00.306935', '1 dose', 'Rabies Vaccine', 'Vaccine', 'No issues', '2026-04-16 23:06:00.306935') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mTreatment Create (1.9ms)[0m  [1m[32mINSERT INTO "treatments" ("administered_at", "appointment_id", "created_at", "dosage", "medication", "name", "notes", "updated_at") VALUES ('2026-04-16 23:06:00.313332', 3, '2026-04-16 23:06:00.313764', 'Twice daily', 'Antibiotic cream', 'Bandage', 'Recovering well', '2026-04-16 23:06:00.313764') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mTreatment Create (1.9ms)[0m  [1m[32mINSERT INTO "treatments" ("administered_at", "appointment_id", "created_at", "dosage", "medication", "name", "notes", "updated_at") VALUES ('2026-04-16 23:06:00.319192', 3, '2026-04-16 23:06:00.319325', 'Once daily', 'Ibuprofen', 'Pain relief', 'Monitor closely', '2026-04-16 23:06:00.319325') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mTreatment Create (2.2ms)[0m  [1m[32mINSERT INTO "treatments" ("administered_at", "appointment_id", "created_at", "dosage", "medication", "name", "notes", "updated_at") VALUES ('2026-04-16 23:06:00.324617', 5, '2026-04-16 23:06:00.324736', 'N/A', 'None', 'General check', 'Healthy', '2026-04-16 23:06:00.324736') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='VetClinic'*/[0m
+  [1m[36mTreatment Create (1.9ms)[0m  [1m[32mINSERT INTO "treatments" ("administered_at", "appointment_id", "created_at", "dosage", "medication", "name", "notes", "updated_at") VALUES ('2026-04-16 23:06:00.330171', 2, '2026-04-16 23:06:00.330278', 'Single dose', 'Antiparasitic', 'Deworming', 'Follow-up in 3 months', '2026-04-16 23:06:00.330278') RETURNING "id" /*application='VetClinic'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='VetClinic'*/[0m
+  [1m[36mOwner Count (114.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "owners" /*application='VetClinic'*/[0m
+  [1m[36mPet Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" /*application='VetClinic'*/[0m
+  [1m[36mVet Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vets" /*application='VetClinic'*/[0m
+  [1m[36mAppointment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "appointments" /*application='VetClinic'*/[0m
+  [1m[36mTreatment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments" /*application='VetClinic'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-04-16 19:08:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (237.9ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+Started GET "/" for 127.0.0.1 at 2026-04-16 19:08:47 -0400
+  [1m[36mPet Count (4.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 404.6ms | GC: 0.0ms)
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (12.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 27.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 153.5ms | GC: 0.0ms)
+Completed 200 OK in 236ms (Views: 143.4ms | ActiveRecord: 12.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 682.4ms | GC: 0.0ms)
+Completed 200 OK in 1175ms (Views: 520.2ms | ActiveRecord: 266.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+

@@ -1,2 +1,28 @@
-<h1>Pets#index</h1>
-<p>Find me in app/views/pets/index.html.erb</p>
+<h1 class="text-center my-4">Pets</h1>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Species</th>
+          <th>Breed</th>
+          <th>Owner name</th>
+          <th>Date of birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pets.each do |pet| %>
+          <tr>
+            <td><%= link_to pet.name, pet_path(pet) %></td>
+            <td><%= pet.species %></td>
+            <td><%= pet.breed %></td>
+            <td><%= link_to "#{pet.owner.first_name} #{pet.owner.last_name}", owner_path(pet.owner) %></td>
+            <td><%= pet.date_of_birth.strftime("%B %d, %Y") if pet.date_of_birth %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
