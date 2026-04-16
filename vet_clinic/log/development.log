@@ -1456,3 +1456,285 @@ Processing by OwnersController#index as HTML
 Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/appointments" for 127.0.0.1 at 2026-04-16 19:26:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='VetClinic'*/[0m
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (105.7ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:17
+  [1m[36mPet Load (2.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (2.5ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 4 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  Rendered appointments/index.html.erb within layouts/application (Duration: 180.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 205.5ms | GC: 0.0ms)
+Completed 200 OK in 284ms (Views: 81.8ms | ActiveRecord: 131.9ms (11 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2026-04-16 19:26:51 -0400
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:17
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.5ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.6ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 4 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  Rendered appointments/index.html.erb within layouts/application (Duration: 24.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 23.7ms | ActiveRecord: 3.5ms (11 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2026-04-16 19:30:27 -0400
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/controllers/appointments_controller.rb:7:in 'AppointmentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:11
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:15
+  [1m[36mTreatment Load (1.1ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."appointment_id" = 1 /*action='show',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/show.html.erb:33
+  Rendered appointments/show.html.erb within layouts/application (Duration: 28.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | GC: 0.0ms)
+Completed 200 OK in 99ms (Views: 41.1ms | ActiveRecord: 7.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2026-04-16 19:30:29 -0400
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:17
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.4ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.5ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 4 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  Rendered appointments/index.html.erb within layouts/application (Duration: 19.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 17.5ms | ActiveRecord: 3.4ms (11 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/vets" for 127.0.0.1 at 2026-04-16 19:30:47 -0400
+Processing by VetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vets/index.html.erb within layouts/application
+  [1m[36mVet Load (0.4ms)[0m  [1m[34mSELECT "vets".* FROM "vets" /*action='index',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/index.html.erb:15
+  Rendered vets/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners" for 127.0.0.1 at 2026-04-16 19:31:05 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (1.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 11.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 12.7ms | ActiveRecord: 2.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2026-04-16 19:31:05 -0400
+Processing by PetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:17
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mCACHE Owner Load (0.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mCACHE Owner Load (0.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1[0m
+  ↳ app/views/pets/index.html.erb:22
+  Rendered pets/index.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 1.2ms (6 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/owners" for 127.0.0.1 at 2026-04-16 19:31:06 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 1.6ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/pets" for 127.0.0.1 at 2026-04-16 19:31:10 -0400
+Processing by PetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:17
+  [1m[36mOwner Load (0.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mCACHE Owner Load (0.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 1 LIMIT 1[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='pets'*/[0m
+  ↳ app/views/pets/index.html.erb:22
+  [1m[36mCACHE Owner Load (0.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners" WHERE "owners"."id" = 3 LIMIT 1[0m
+  ↳ app/views/pets/index.html.erb:22
+  Rendered pets/index.html.erb within layouts/application (Duration: 11.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 1.8ms (6 queries, 2 cached) | GC: 0.0ms)
+
+
+Started GET "/vets" for 127.0.0.1 at 2026-04-16 19:31:11 -0400
+Processing by VetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vets/index.html.erb within layouts/application
+  [1m[36mVet Load (0.6ms)[0m  [1m[34mSELECT "vets".* FROM "vets" /*action='index',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/index.html.erb:15
+  Rendered vets/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2026-04-16 19:31:11 -0400
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:17
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.2ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mVet Load (0.1ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 3 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 4 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 2 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  [1m[36mPet Load (0.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = 5 LIMIT 1 /*action='index',application='VetClinic',controller='appointments'*/[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mCACHE Vet Load (0.0ms)[0m  [1m[34mSELECT "vets".* FROM "vets" WHERE "vets"."id" = 1 LIMIT 1[0m
+  ↳ app/views/appointments/index.html.erb:21
+  Rendered appointments/index.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 2.3ms (11 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/vets" for 127.0.0.1 at 2026-04-16 19:31:13 -0400
+Processing by VetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vets/index.html.erb within layouts/application
+  [1m[36mVet Load (0.4ms)[0m  [1m[34mSELECT "vets".* FROM "vets" /*action='index',application='VetClinic',controller='vets'*/[0m
+  ↳ app/views/vets/index.html.erb:15
+  Rendered vets/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/owners" for 127.0.0.1 at 2026-04-16 19:31:14 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners" /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:16
+  [1m[36mPet Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 1 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 2 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  [1m[36mPet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "pets" WHERE "pets"."owner_id" = 3 /*action='index',application='VetClinic',controller='owners'*/[0m
+  ↳ app/views/owners/index.html.erb:21
+  Rendered owners/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
