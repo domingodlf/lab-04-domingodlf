@@ -247,7 +247,7 @@ Treatment.create(
   medication: "Rabies Vaccine",
   dosage: "1 dose",
   notes: "No issues",
-  administered_at: Time.now
+  administered_at: appointment2.date + 1.day
 )
 
 Treatment.create(
@@ -256,7 +256,7 @@ Treatment.create(
   medication: "Antibiotic cream",
   dosage: "Twice daily",
   notes: "Recovering well",
-  administered_at: Time.now
+  administered_at: appointment3.date + 3.hours
 )
 
 Treatment.create(
@@ -265,7 +265,7 @@ Treatment.create(
   medication: "Ibuprofen",
   dosage: "Once daily",
   notes: "Monitor closely",
-  administered_at: Time.now
+  administered_at: appointment3.date + 1.day + 2.hours
 )
 
 Treatment.create(
@@ -274,7 +274,7 @@ Treatment.create(
   medication: "None",
   dosage: "N/A",
   notes: "Healthy",
-  administered_at: Time.now
+  administered_at: appointment5.date + 4.hours
 )
 
 Treatment.create(
@@ -283,7 +283,7 @@ Treatment.create(
   medication: "Antiparasitic",
   dosage: "Single dose",
   notes: "Follow-up in 3 months",
-  administered_at: Time.now
+  administered_at: appointment2.date + 2.hours
 )
 
 Treatment.create(
